@@ -125,7 +125,7 @@ code.innerHTML=`<img src="jsmeme.png" alt="meme" style = "width:200px">`;
 // Get a reference to the button w/ id="show-info-button"
 let showInfoButton = document.querySelector('#show-info-button');
 
-// Do something when showInfoButton is clicke
+// Do something when showInfoButton is clicked
 showInfoButton.addEventListener('click', function() {
   console.log('Clicked "Show Info" button');
 
@@ -150,6 +150,7 @@ showInfoButton.addEventListener('click', function() {
 // Get a reference to form w/ id="information-form"
 let informationForm = document.querySelector('#information-form');
 
+
 // Do something when form is submitted
 informationForm.addEventListener('submit', function(event) {
   event.preventDefault(); // You will want this here. Remove it and see what changes.
@@ -159,6 +160,12 @@ informationForm.addEventListener('submit', function(event) {
   // Your job:
   //   1. Get information typed into the form
   //   2. Display that info in "Display that info here" section
+let Box1 = document.getElementById('fname').value;
+document.getElementById("firstname").textContent = Box1;
+let Box2 = document.getElementById('lname').value;
+document.getElementById("lastname").textContent = Box2;
+let Box3 = document.getElementById('cars').value;
+document.getElementById("carchoice").textContent = Box3;
 
   // Google things like:
   //   javascript form element get values
