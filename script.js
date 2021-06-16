@@ -22,11 +22,29 @@ function addName() {
   // - https://www.w3schools.com/jsref/prop_node_innertext.asp
 
   let nameElement = document.querySelector('#name');
-  nameElement.innerText = 'See script.js!';
+  nameElement.innerText = 'Amelia!';
 }
 
 function addFavoriteThings() {
   console.log('Called addFavoriteThings()');
+
+  const menu = document.querySelector('#favthings');
+  menu.innerHTML = ""
+  let li = document.createElement('li');
+  li.textContent = 'running';
+  menu.appendChild(li);
+
+  li = document.createElement('li');
+  li.textContent = 'baking';
+  menu.appendChild(li);
+
+  li = document.createElement('li');
+  li.textContent = 'crafting';
+  menu.appendChild(li);
+
+  li = document.createElement('li');
+  li.textContent = 'traveling';
+  menu.appendChild(li);
 
   // 1. Get a reference to <ul id="favthings">
   // 2. Create a few list items representing your favorite things
@@ -40,6 +58,17 @@ function addFavoriteThings() {
 
 function replaceImage() {
   console.log('Called replaceImage()');
+  image = document.getElementbyId('picture')
+  image.src = Ameliastretchpic.jpg;
+
+  // let nameElement = document.querySelector('#picture');
+  // let picture = document.queryselector
+  // var link = document.getElementbyId("picture")
+  // link.setAttribute("href", "Ameliastretchpic.jpg");
+
+  // let stretch = document.querySelector(".picture");
+  //   var link = document.getElementbyId(".picture");
+  //    link.setAttribute("href", "Ameliastretchpic.jpg");
 
   // Change the puppy picture to a picture of your choosing
 
