@@ -58,13 +58,18 @@ function addFavoriteThings() {
 
 function replaceImage() {
   console.log('Called replaceImage()');
-  image = document.getElementbyId('picture')
-  image.src = Ameliastretchpic.jpg;
+ let stretch = document.getElementById("picture");
+  stretch.setAttribute("src", "Ameliastretchpic.jpg");
+}
+// using this to replace image completely, not only when you click Show Info button
+replaceImage();
 
-  // let nameElement = document.querySelector('#picture');
-  // let picture = document.queryselector
-  // var link = document.getElementbyId("picture")
-  // link.setAttribute("href", "Ameliastretchpic.jpg");
+
+//   image = document.getElementbyId('picture')
+//   image.src = Ameliastretchpic.jpg;
+//   const replaceImage = document.querySelector('#picture');
+// }
+
 
   // let stretch = document.querySelector(".picture");
   //   var link = document.getElementbyId(".picture");
@@ -75,7 +80,7 @@ function replaceImage() {
   // See:
   // - https://www.tutorialrepublic.com/javascript-tutorial/javascript-dom-get-set-attributes.php
   // - https://www.w3schools.com/jsref/met_element_setattribute.asp
-}
+
 
 function changeCodeStatus() {
   console.log('Called changeCodeStatus()');
