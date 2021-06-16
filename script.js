@@ -27,24 +27,42 @@ function addName() {
 
 function addFavoriteThings() {
   console.log('Called addFavoriteThings()');
+let favoriteThings = document.querySelector('#favthings');
+console.log(favoriteThings);
+favoriteThings.innerHTML = `
+<li>Running</li>
+<li>Baking</li>
+<li>Crafting</li>
+<li>Traveling</li>`;
 
-  const menu = document.querySelector('#favthings');
-  menu.innerHTML = ""
-  let li = document.createElement('li');
-  li.textContent = 'running';
-  menu.appendChild(li);
 
-  li = document.createElement('li');
-  li.textContent = 'baking';
-  menu.appendChild(li);
 
-  li = document.createElement('li');
-  li.textContent = 'crafting';
-  menu.appendChild(li);
+// let favThings = ["Running", "Baking", "Crafting", "Traveling"]
+// for(let item of favThingsList){
+//   console.log(item);
+//   let li = document.createElement('li');
+//   li.innerText = item;
+//   favoriteThings.appendChild(li);
+// }
 
-  li = document.createElement('li');
-  li.textContent = 'traveling';
-  menu.appendChild(li);
+
+//   const menu = document.querySelector('#favthings');
+//   menu.innerHTML = ""
+//   let li = document.createElement('li');
+//   li.textContent = 'running';
+//   menu.appendChild(li);
+
+//   li = document.createElement('li');
+//   li.textContent = 'baking';
+//   menu.appendChild(li);
+
+//   li = document.createElement('li');
+//   li.textContent = 'crafting';
+//   menu.appendChild(li);
+
+//   li = document.createElement('li');
+//   li.textContent = 'traveling';
+//   menu.appendChild(li);
 
   // 1. Get a reference to <ul id="favthings">
   // 2. Create a few list items representing your favorite things
@@ -61,16 +79,18 @@ function replaceImage() {
  let stretch = document.getElementById("picture");
   stretch.setAttribute("src", "Ameliastretchpic.jpg");
 }
+
+let image = document.querySelector('#picture');
+console.log(image);
+image.setAttribute("src","Ameliastretchpic.");
 // using this to replace image completely, not only when you click Show Info button
 replaceImage();
 
-
+//Troubleshooting down below//
 //   image = document.getElementbyId('picture')
 //   image.src = Ameliastretchpic.jpg;
 //   const replaceImage = document.querySelector('#picture');
 // }
-
-
   // let stretch = document.querySelector(".picture");
   //   var link = document.getElementbyId(".picture");
   //    link.setAttribute("href", "Ameliastretchpic.jpg");
@@ -84,11 +104,23 @@ replaceImage();
 
 function changeCodeStatus() {
   console.log('Called changeCodeStatus()');
+let code = document.getElementById("codestatus");
+code.innerHTML=""
+let meme = document.createElement('jsmeme');
+meme.setAttribute("src", "jsmeme.png");
+
+// // code.textContent = null;
+// code.appendChild(meme);
+
+code.innerHTML=`<img src="jsmeme.png" alt="meme" style = "width:200px">`;
+
+
 
   // 1. Get a reference to <div id="codestatus">
   // 2. Create image element containing a sweet ol' meme
   // 3. Replace text in codestatus w/ image
 }
+
 
 // Get a reference to the button w/ id="show-info-button"
 let showInfoButton = document.querySelector('#show-info-button');
